@@ -20,7 +20,11 @@ DROP TABLE retiring_titles;
 CREATE TABLE retiring_titles(count INTEGER NOT NULL, 
 title VARCHAR(50) NOT NULL);
 
-SELECT COUNT(title) as count, title FROM unique_titles GROUP BY title ORDER BY count DESC; 
+DROP TABLE retiring_titles;
+
+SELECT  COUNT(title) as count, title INTO retiring_titles FROM unique_titles GROUP BY title ORDER BY count DESC;
+
+SELECT * FROM retiring_titles; 
 
 DROP TABLE mentorsihip_eligibiity;
 
